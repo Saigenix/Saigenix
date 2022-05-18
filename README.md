@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm Saigenix</h1>
 <p align="centre"> <img src="https://raw.githubusercontent.com/Saigenix/Saigenix/main/images/name.gif" alt="saigenix" /> </p>
-<h3 align="center">I am interested in AI and App development!</h3>
+<h3 align="center">I am interested in AI🛠 and App development📱!</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=saigenix&label=Profile%20views&color=0e75b6&style=flat" alt="saigenix" /> </p>
 
