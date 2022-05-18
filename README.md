@@ -2,9 +2,9 @@
 <p align="centre"> <img src="https://raw.githubusercontent.com/Saigenix/Saigenix/main/images/name.gif" alt="saigenix" /> </p>
 <h3 align="center">I am interested in AI🛠 and App development📱!</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=saigenix&label=Profile%20views&color=0e75b6&style=flat" alt="saigenix" /> </p>
+<p align="centre"> <img src="https://komarev.com/ghpvc/?username=saigenix&label=Profile%20views&color=0e75b6&style=flat" alt="saigenix" /> </p>
 
-<p align="centre"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=saigenix" alt="saigenix" /></a> </p>
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=saigenix" alt="saigenix" /></a> </p>
 
 - 🔭 I’m currently working on **App/Game development**
 
