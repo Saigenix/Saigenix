@@ -1,3 +1,5 @@
+![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=plastic&logo=javascript)
+
 <h1 align="center">Hi 👋, I'm Saigenix</h1>
 <p align="centre"> <img src="https://raw.githubusercontent.com/Saigenix/Saigenix/main/images/name.gif" alt="saigenix" /> </p>
 <h3 align="center">I am interested in AI🛠 and App development📱!</h3>
