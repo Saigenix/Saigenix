@@ -10,9 +10,9 @@
 
 - 🤝 I’m looking for help with **Blockchain !**
 
-- 👨‍💻 All of my projects are available at [On This Profile !](On This Profile !)
+- 👨‍💻 All of my projects are available on [github](https://github.com/Saigenix)
 
-- 📝 I regularly write articles on [Opemic.com](Opemic.com)
+- 📝 I regularly write articles on [Opemic.com](https://Opemic.com)
 
 - 💬 Ask me about **Marketing , game development**
 
