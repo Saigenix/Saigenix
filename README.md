@@ -14,7 +14,7 @@
 
 - 📝 I regularly write articles on [Opemic.com](https://Opemic.com)
 
-- 💬 Ask me about **Marketing , game development**
+- 💬 Ask me about **Marketing , game development, web development**
 
 - 📫 How to reach me **Telegram Id : @saigenix**
 
