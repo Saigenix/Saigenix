@@ -1,5 +1,6 @@
 # Hi 👋, I'm Saigenix
 ![Saigenix](https://raw.githubusercontent.com/Saigenix/Saigenix/main/images/name.gif)
+
 ### I am interested in AI🛠 and App development📱! 
 
 - 🔭 I’m currently working on **App/Game development**
@@ -19,6 +20,13 @@
 - 📫 How to reach me **Telegram Id : @saigenix**
 
 - ⚡ Fun fact **Real is Fictional !**
+### Key Projects 📊
+
+- [JustQuotes](https://github.com/Saigenix/JustQuotes)
+- [Login System](https://github.com/Saigenix/login-System)
+- [NoteR](https://github.com/Saigenix/NoteR)
+- [PortF](https://github.com/Saigenix/portf)
+
 
 ### Connect With Me:
 <p align="left">
