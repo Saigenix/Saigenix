@@ -1,4 +1,4 @@
-# Hi 👋, I'm Saigenix
+# Hi 👋, I'm 
 ![Saigenix](https://raw.githubusercontent.com/Saigenix/Saigenix/main/images/name.gif)
 
 ### I am interested in AI🛠 and App development📱! 
