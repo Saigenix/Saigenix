@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
-  return (
-    <div>
-    its about
-    </div>
-  )
-}
+    return <div className="h-[100vh] w-[100vw]">its about</div>;
+};
 
-export default About
+export default About;
