@@ -3,7 +3,7 @@
 
 ### I am interested in AI🛠 and App development📱! 
 
-- 🔭 I’m currently working on **App/Game development**
+- 🔭 I’m currently working on **AI and ML**
 
 - 🌱 I’m currently learning **AI, Machine learning, React Native, Python, Unity**
 
