@@ -15,11 +15,9 @@
 
 - 📝 I regularly write articles on [Opemic.com](https://Opemic.com)
 
-- 💬 Ask me about **Marketing , game development, web development**
+- 💬 Ask me about **Machine Learning, game development, web development**
 
-- 📫 How to reach me **Telegram Id : @saigenix**
-
-- ⚡ Fun fact **Real is Fictional !**
+- 📫 How to reach me **Twitter Id : @saigenix**
 ### Key Projects 📊
 
 - [JustQuotes](https://github.com/Saigenix/JustQuotes)
