@@ -1,21 +1,15 @@
 # Hi 👋, I'm 
 ![Saigenix](https://raw.githubusercontent.com/Saigenix/Saigenix/main/images/name.gif)
 
-### I am interested in AI🛠 and App development📱! 
+### I am interested in AI🛠 and Software development📱! 
 
 - 🔭 I’m currently working on **AI and ML**
 
 - 🌱 I’m currently learning **AI, Machine learning, React Native, Python, Unity**
 
-- 👯 I’m looking to collaborate on **AI and App/Game development projects !**
-
-- 🤝 I’m looking for help with **Blockchain !**
+- 👯 I’m looking to collaborate on **AI and Software development projects !**
 
 - 👨‍💻 All of my projects are available on [github](https://github.com/Saigenix)
-
-- 📝 I regularly write articles on [Opemic.com](https://Opemic.com)
-
-- 💬 Ask me about **Machine Learning, game development, web development**
 
 - 📫 How to reach me **Twitter Id : @saigenix**
 ### Key Projects 📊
