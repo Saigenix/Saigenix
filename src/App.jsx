@@ -11,10 +11,8 @@ function App() {
   const [history, setHistory] = useState([]);
   const commands = [
     {
-      command: ["Sainath", "Resume", "about", "projects", "contact"],
-      callback: ({ command }) => {
-        alert(`Hi there! heres the resume: "${command}"`);
-      },
+      command: ["Sainath", "resume", "about", "projects", "contact"],
+      callback: ({ command }) => console.log(command),
       matchInterim: true,
     },
   ];
