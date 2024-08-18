@@ -7,12 +7,25 @@ import "./App.css";
 import Typewriter from "typewriter-effect";
 import Navbar from "./components/Navbar";
 import { chatWithGemini } from "./utils/gemini";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import Resume from "./components/Resume";
+import { useModelStore } from "./utils/store";
+
 function App() {
   const [history, setHistory] = useState([]);
+  const modelStates = useModelStore((state) => ({
+    about: state.about,
+    contact: state.contact,
+    projects: state.projects,
+    resume: state.resume,
+    handleClose: (id) => state.handleClose(id),
+  }));
   const commands = [
     {
-      command: ["Sainath", "resume", "about", "projects", "contact"],
-      callback: ({ command }) => console.log(command),
+      command: ["sainath","sainath mahindrakar", "resume", "about", "projects", "contact"],
+      callback: ({ command }) => modelStates.handleClose(command),
       matchInterim: true,
     },
   ];
@@ -27,59 +40,47 @@ function App() {
     SpeechRecognition.startListening({ language: "en-IN" });
     speechSynthesis.cancel();
   };
- async function generateChatGemini(chatHistory, message) {
-   setHistory((prev) => [
-     ...prev,
-     {
-       role: "user",
-       parts: [{ text: message }],
-     },
-     {
-       role: "model",
-       parts: [{ text: "loading..." }],
-     },
-   ]);
-   try {
-     const content = await chatWithGemini(chatHistory, message);
-     let utterance = new SpeechSynthesisUtterance(content);
-     speechSynthesis.speak(utterance);
-     setHistory((prev) => {
-       const newMessages = [...prev];
-       newMessages[newMessages.length - 1].parts[0].text = content;
-       return newMessages;
-     });
-   } catch (error) {
-     console.error("Error calling function:", error);
-     setHistory((prev) => {
-       const newMessages = [...prev];
-       newMessages[newMessages.length - 1].parts[0].text =
-         "An error occurred. Please try again.";
-       return newMessages;
-     });
-   }
- }
+  async function generateChatGemini(chatHistory, message) {
+    setHistory((prev) => [
+      ...prev,
+      {
+        role: "user",
+        parts: [{ text: message }],
+      },
+      {
+        role: "model",
+        parts: [{ text: "loading..." }],
+      },
+    ]);
+    try {
+      const content = await chatWithGemini(chatHistory, message);
+      let utterance = new SpeechSynthesisUtterance(content);
+      speechSynthesis.speak(utterance);
+      setHistory((prev) => {
+        const newMessages = [...prev];
+        newMessages[newMessages.length - 1].parts[0].text = content;
+        return newMessages;
+      });
+    } catch (error) {
+      console.error("Error calling function:", error);
+      setHistory((prev) => {
+        const newMessages = [...prev];
+        newMessages[newMessages.length - 1].parts[0].text =
+          "An error occurred. Please try again.";
+        return newMessages;
+      });
+    }
+  }
   useEffect(() => {
-    const getContent = async  () => {
+    const getContent = async () => {
       if (finalTranscript) {
-        //  const history = [
-        //    {
-        //      role: "user",
-        //      parts: [{ text: "Hello" }],
-        //    },
-        //    {
-        //      role: "model",
-        //      parts: [
-        //        { text: "Great to meet you. What would you like to know?" },
-        //      ],
-        //    },
-        //  ];
         const chatHistory = {
           history: history,
           generationConfig: { maxOutputTokens: 500 },
         };
         await generateChatGemini(chatHistory, finalTranscript);
       }
-    }
+    };
     getContent();
   }, [finalTranscript]);
   return (
@@ -90,12 +91,38 @@ function App() {
       >
         <Navbar finalTranscript={history} />
         <div className="text-center flex flex-row items-center justify-center text-[#e3e3e3] text-2xl">
-          <a className="p-3 cursor-pointer">/about</a>
-          <a className="p-3 cursor-pointer">/contact</a>
-          <a className="p-3 cursor-pointer">/project</a>
-          <a className="p-3 cursor-pointer">/resume</a>
+          <a
+            className="p-3 cursor-pointer"
+            onClick={() => modelStates.handleClose("about")}
+          >
+            /about
+          </a>
+          <a
+            className="p-3 cursor-pointer"
+            onClick={() => modelStates.handleClose("contact")}
+          >
+            /contact
+          </a>
+          <a
+            className="p-3 cursor-pointer"
+            onClick={() => modelStates.handleClose("projects")}
+          >
+            /project
+          </a>
+          <a
+            className="p-3 cursor-pointer"
+            onClick={() => modelStates.handleClose("resume")}
+          >
+            /resume
+          </a>
+          {modelStates.about && <About />}
+          {modelStates.contact && <Contact />}
+          {modelStates.projects && <Projects />}
+          {modelStates.resume && <Resume />}
         </div>
-        <p className="text-[#f95959] text-7xl">Sainath Mahindrakar</p>
+        <p className="text-7xl p-4" id="heading">
+          Sainath Mahindrakar
+        </p>
         <div className="text-white absolute bottom-[150px] left-[600px]">
           <img
             src={"/images/arrow.png"}
