@@ -125,7 +125,9 @@ function App() {
         </p>
         <div className="text-white absolute bottom-[150px] left-[600px]">
           <img
-            src={"/images/arrow.png"}
+            src={
+              "./images/arrow.png"
+            }
             className="fill-white w-48 rotate-[-70deg]"
           />
           <div className=" absolute bottom-[40px] left-[-100px]">
