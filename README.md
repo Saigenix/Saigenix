@@ -1,5 +1,5 @@
 # Hi 👋, I'm 
-![Saigenix](https://raw.githubusercontent.com/Saigenix/Saigenix/main/images/name.gif)
+![Saigenix](https://raw.githubusercontent.com/Saigenix/Saigenix/main/public/images/name.gif)
 
 ### I am interested in AI🛠 and Software development📱! 
 
