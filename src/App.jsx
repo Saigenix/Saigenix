@@ -11,7 +11,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
-import { useModelStore } from "./utils/store";
+import { useModelStore,useVoiceStore } from "./utils/store";
 
 function App() {
   const [history, setHistory] = useState([]);
@@ -22,6 +22,12 @@ function App() {
     resume: state.resume,
     handleClose: (id) => state.handleClose(id),
   }));
+  const voiceStates = useVoiceStore((state) => ({
+    voice: state.voice,
+    pitch: state.pitch,
+    rate: state.rate,
+  }));
+
   const commands = [
     {
       command: ["sainath","sainath mahindrakar", "resume", "about", "projects", "contact"],
@@ -55,6 +61,9 @@ function App() {
     try {
       const content = await chatWithGemini(chatHistory, message);
       let utterance = new SpeechSynthesisUtterance(content);
+      utterance.voice = voiceStates.voice;
+      utterance.pitch = voiceStates.pitch;
+      utterance.rate = voiceStates.rate;
       speechSynthesis.speak(utterance);
       setHistory((prev) => {
         const newMessages = [...prev];
@@ -125,7 +134,9 @@ function App() {
         </p>
         <div className="text-white absolute bottom-[150px] left-[600px]">
           <img
-            src={"/images/arrow.png"}
+            src={
+              "./images/arrow.png"
+            }
             className="fill-white w-48 rotate-[-70deg]"
           />
           <div className=" absolute bottom-[40px] left-[-100px]">

@@ -1,6 +1,16 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { useVoiceStore } from "./store";
+var api = import.meta.env.VITE_GEMINI_API_KEY;
 
-const api = import.meta.env.VITE_GEMINI_API_KEY;
+// if (useVoiceStore.getState().api_key != "") {
+//   // console.log(useVoiceStore.getState().api_key);
+//   if (useVoiceStore.getState().api_key == "sai") {
+//     api = import.meta.env.VITE_GEMINI_API_KEY;
+//   } else {
+//     api = useVoiceStore.getState().api_key;
+//   }
+// }
+
 const genAI = new GoogleGenerativeAI(api);
 const ChatModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -15,6 +25,6 @@ export async function chatWithGemini(chatHistory, message) {
     return text;
   } catch (error) {
     console.log(error);
-    return "An error occurred. Please try again.";
+    return "To continue chatting provide Gemini Api Key in Settings.";
   }
 }

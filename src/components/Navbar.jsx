@@ -29,7 +29,9 @@ function Navbar({ finalTranscript }) {
           </button>
         </div>
       )}
-      <button onClick={() => modelStates.handleClose("transcript")} className="mr-2">
+      <button onClick={() => {
+        modelStates.handleClose("transcript")
+      }} className="mr-2">
         <PiReadCvLogoFill size={30} color="#fff" />
       </button>
       <button

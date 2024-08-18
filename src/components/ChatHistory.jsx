@@ -8,7 +8,14 @@ function ChatHistory({ finalTranscript }) {
   }, [finalTranscript]);
 
   return (
-    <Model id="transcript" width={500} height={200} x={850} y={30} title={"Chat History"}>
+    <Model
+      id="transcript"
+      width={400}
+      height={"500vh"}
+      x={0}
+      y={10}
+      title={"Chat History"}
+    >
       {transcript.map((item, index) => {
         if (item)
           return (
