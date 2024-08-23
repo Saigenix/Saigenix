@@ -96,7 +96,10 @@ function App() {
     <>
       <div
         className="bg-cover bg-center bg-no-repeat h-screen w-full flex items-center justify-center flex-col"
-        style={{ backgroundColor: "#233142" }}
+        style={{
+          backgroundColor: "#233142",
+          backgroundImage: "url(./images/bg.svg)",
+        }}
       >
         <Navbar finalTranscript={history} />
         <div className="text-center flex flex-row items-center justify-center text-[#e3e3e3] text-2xl">
@@ -134,9 +137,7 @@ function App() {
         </p>
         <div className="text-white absolute bottom-[150px] left-[600px]">
           <img
-            src={
-              "./images/arrow.png"
-            }
+            src={"./images/arrow.png"}
             className="fill-white w-48 rotate-[-70deg]"
           />
           <div className=" absolute bottom-[40px] left-[-100px]">
