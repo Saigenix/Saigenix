@@ -1,5 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useVoiceStore } from "./store";
+import { SYSTEM_PROMPT } from "./config";
 var api = import.meta.env.VITE_GEMINI_API_KEY;
 
 // if (useVoiceStore.getState().api_key != "") {
@@ -12,7 +13,9 @@ var api = import.meta.env.VITE_GEMINI_API_KEY;
 // }
 
 const genAI = new GoogleGenerativeAI(api);
-const ChatModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const ChatModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash",
+  systemInstruction:SYSTEM_PROMPT,
+ });
 
 export async function chatWithGemini(chatHistory, message) {
   // console.log(chatHistory, message);

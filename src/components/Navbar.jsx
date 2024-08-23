@@ -19,7 +19,7 @@ function Navbar({ finalTranscript }) {
         <div className="flex">
           <img src={"./images/audio.gif"} className="w-12 mr-2 scale-[2]" />
           <button
-            className="mr-2 z-10"
+            className="mr-2 z-10 bg-white rounded-full opacity-90 p-[1px]"
             onClick={() => {
               speechSynthesis.cancel();
               setUpdate((prev) => !prev);
