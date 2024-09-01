@@ -65,4 +65,13 @@ export const Projects_data = [
     link: "https://gemini-toolkit.vercel.app/",
     github: "https://github.com/saigenix/gemini-toolkit",
   },
+  {
+    name: "Easy Authentication System",
+    description:
+      "EasyAuth is a versatile authentication system that allows developers to add authentication to their applications in seconds.",
+    tags: ["Nodejs", "Express", "Prisma", "REST API", "Passport", "JWT"],
+    image: "images/projects/easy-auth.png",
+    link: "https://github.com/Saigenix/login-System",
+    github: "https://github.com/Saigenix/login-System",
+  },
 ];

@@ -17,9 +17,9 @@ function Projects() {
       <div className="bg-[#233142] p-5 text-white">
         <h2 className="text-2xl text-[#f95959] font-bold">Projects...</h2>
         <p>Here's my some of the cool projects</p>
-        <div className="flex flex-col p-3 ">
+        <div className="flex flex-col my-4 space-y-4">
           {Projects_data.map((project) => (
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-[#455d7a]">
+            <div className="rounded overflow-hidden shadow-lg bg-[#455d7a]">
               <img
                 className="w-full"
                 src={project.image}
