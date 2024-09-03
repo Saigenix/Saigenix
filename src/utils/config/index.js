@@ -74,4 +74,19 @@ export const Projects_data = [
     link: "https://github.com/Saigenix/login-System",
     github: "https://github.com/Saigenix/login-System",
   },
+  {
+    name: "Stunt Car Driving Simulator",
+    description:
+      "Developed a car driving game using Unity and C#, featuring realistic physics simulations and advanced 3D graphics with detailed environments and vehicles.",
+    tags: ["Unity", "C#", "Blender", "3D Graphics", "Physics Simulation"],
+    image: "images/projects/car.png",
+    link: "https://play.google.com/store/apps/details?id=com.Saigenix.IndianstuntCarDriving",
+    github:
+      "https://play.google.com/store/apps/details?id=com.Saigenix.IndianstuntCarDriving",
+  },
 ];
+
+export const CustomStyles = {
+  hover:
+    "transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300",
+};

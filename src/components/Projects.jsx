@@ -4,6 +4,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import { FaCode } from "react-icons/fa";
 import Tags from "./Tags";
 import { Projects_data } from "../utils/config";
+import { CustomStyles } from "../utils/config";
 function Projects() {
   return (
     <Model
@@ -29,13 +30,17 @@ function Projects() {
                 <div className="font-bold text-xl mb-2 flex ">
                   <h2 className="text-xl p-1">{project.name}</h2>
                   <div className="ml-auto flex">
-                    <a href={project.link} target="_blank" className="p-1">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      className={`${CustomStyles.hover} p-1`}
+                    >
                       <HiOutlineExternalLink size={25} />
                     </a>
                     <a
                       href={project.github}
                       target="_blank"
-                      className="p-1"
+                      className={`${CustomStyles.hover} p-1`}
                     >
                       <FaCode size={25} />
                     </a>

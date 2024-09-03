@@ -2,7 +2,6 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import { useState, useEffect } from "react";
-import { FaMicrophone } from "react-icons/fa";
 import "./App.css";
 import Typewriter from "typewriter-effect";
 import Navbar from "./components/Navbar";
@@ -11,8 +10,9 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
-import { useModelStore,useVoiceStore } from "./utils/store";
-
+import { useModelStore, useVoiceStore } from "./utils/store";
+import { CustomStyles } from "./utils/config";
+import { GrMicrophone } from "react-icons/gr";
 function App() {
   const [history, setHistory] = useState([]);
   const modelStates = useModelStore((state) => ({
@@ -30,7 +30,14 @@ function App() {
 
   const commands = [
     {
-      command: ["sainath","sainath mahindrakar", "resume", "about", "projects", "contact"],
+      command: [
+        "sainath",
+        "sainath mahindrakar",
+        "resume",
+        "about",
+        "projects",
+        "contact",
+      ],
       callback: ({ command }) => modelStates.handleClose(command),
       matchInterim: true,
     },
@@ -92,6 +99,17 @@ function App() {
     };
     getContent();
   }, [finalTranscript]);
+
+  // future updates
+  // function getRandomHexColor() {
+  //   const hexCharacters = "0123456789ABCDEF";
+  //   let color = "#";
+  //   for (let i = 0; i < 6; i++) {
+  //     color += hexCharacters[Math.floor(Math.random() * 16)];
+  //   }
+  //   return color;
+  // }
+
   return (
     <>
       <div
@@ -104,25 +122,25 @@ function App() {
         <Navbar finalTranscript={history} />
         <div className="text-center flex flex-row items-center justify-center text-[#e3e3e3] text-2xl">
           <a
-            className="p-3 cursor-pointer"
+            className={`${CustomStyles.hover} p-3 cursor-pointer hover:text-[#8338ec]`}
             onClick={() => modelStates.handleClose("about")}
           >
             /about
           </a>
           <a
-            className="p-3 cursor-pointer"
+            className={`${CustomStyles.hover} p-3 cursor-pointer hover:text-[#ff006e]`}
             onClick={() => modelStates.handleClose("contact")}
           >
             /contact
           </a>
           <a
-            className="p-3 cursor-pointer"
+            className={`${CustomStyles.hover} p-3 cursor-pointer hover:text-[#3a86ff]`}
             onClick={() => modelStates.handleClose("projects")}
           >
             /project
           </a>
           <a
-            className="p-3 cursor-pointer"
+            className={`${CustomStyles.hover} p-3 cursor-pointer hover:text-[#ffbe0b]`}
             onClick={() => modelStates.handleClose("resume")}
           >
             /resume
@@ -154,12 +172,16 @@ function App() {
           <span>Browser not support speech recognition.</span>
         )}
         <button
-          className="button-85 m-4"
+          className={`${CustomStyles.hover} button-85 m-4 animate-pulse`}
           role="button"
           id="listenButton"
           onClick={OnVoiceClick}
         >
-          {listening ? "Listening..." : <FaMicrophone fill="#000" size={17} />}
+          {listening ? (
+            "Listening..."
+          ) : (
+            <GrMicrophone color="black" size={20} opacity={0.9} />
+          )}
         </button>
       </div>
     </>

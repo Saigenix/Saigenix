@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Model from "./Model";
 function Resume() {
   return (
@@ -10,9 +10,9 @@ function Resume() {
       y={100}
       title={"Resume"}
     >
-      <div className='h-full w-full bg-black'>
+      <div className="h-full w-full bg-black">
         <object
-          data="https://firebasestorage.googleapis.com/v0/b/saigenix-4e71c.appspot.com/o/Sainath_mahindrakar_Full_Stack_resume.pdf?alt=media"
+          data="https://firebasestorage.googleapis.com/v0/b/saigenix-4e71c.appspot.com/o/Sainath_Mahindrakar_Overall_resume.pdf?alt=media"
           type="application/pdf"
           width="100%"
           height="560px"
@@ -31,4 +31,4 @@ function Resume() {
   );
 }
 
-export default Resume
+export default Resume;

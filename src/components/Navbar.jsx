@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { IoSettingsOutline } from "react-icons/io5";
 import { PiReadCvLogoFill } from "react-icons/pi";
 import { FaGithub, FaRegStopCircle } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { useModelStore } from "../utils/store";
 import Settings from "./Settings";
 import ChatHistory from "./ChatHistory";
+import { CustomStyles } from "../utils/config";
 function Navbar({ finalTranscript }) {
   const modelStates = useModelStore((state) => ({
     transcript: state.transcript,
@@ -29,9 +31,12 @@ function Navbar({ finalTranscript }) {
           </button>
         </div>
       )}
-      <button onClick={() => {
-        modelStates.handleClose("transcript")
-      }} className="mr-2">
+      <button
+        onClick={() => {
+          modelStates.handleClose("transcript");
+        }}
+        className={`${CustomStyles.hover} mr-2 cursor-pointer hover:rotate-[-15deg]`}
+      >
         <PiReadCvLogoFill size={30} color="#fff" />
       </button>
       <button
@@ -39,17 +44,27 @@ function Navbar({ finalTranscript }) {
           modelStates.handleClose("settings");
           // console.log("clicked", settings);
         }}
+        className={`${CustomStyles.hover} hover:rotate-45`}
       >
         <IoSettingsOutline size={30} color="#fff" />
       </button>
       <a
-        className="mr-2 ml-3 cursor-pointer"
+        className={`${CustomStyles.hover} mr-2 ml-3 cursor-pointer`}
         href="https://github.com/saigenix/"
         target="_blank"
       >
         <FaGithub size={30} color={"#fff"} />
       </a>
-      {modelStates.transcript && <ChatHistory finalTranscript={finalTranscript} />}
+      <a
+        className={`${CustomStyles.hover} mr-2 ml-3 cursor-pointer`}
+        href="https://www.linkedin.com/in/saigenix77/"
+        target="_blank"
+      >
+        <FaLinkedin size={30} color={"#fff"} />
+      </a>
+      {modelStates.transcript && (
+        <ChatHistory finalTranscript={finalTranscript} />
+      )}
       {modelStates.settings && <Settings />}
     </div>
   );
